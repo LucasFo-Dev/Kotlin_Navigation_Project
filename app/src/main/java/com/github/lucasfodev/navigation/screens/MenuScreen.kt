@@ -42,7 +42,7 @@ fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
                 .align(Alignment.Center)
         ) {
             Button(
-                onClick = { navController.navigate("perfil/Fulano de Tal/27") },
+                onClick = { navController.navigate("perfil/Fulano de Tal") },
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
@@ -60,6 +60,18 @@ fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
             ) {
                 Text(
                     text = "Pedidos",
+                    fontSize = 20.sp,
+                    color = Color.Blue
+                )
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(
+                onClick = { navController.navigate("pedidos?categoria=Eletrônicos") },
+                colors = ButtonDefaults.buttonColors(Color.White),
+                modifier = Modifier.size(width = 200.dp, height = 48.dp)
+            ) {
+                Text(
+                    text = "Pedidos Eletrônicos",
                     fontSize = 20.sp,
                     color = Color.Blue
                 )
