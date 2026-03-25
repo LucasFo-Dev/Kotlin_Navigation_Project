@@ -51,20 +51,14 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(
-                            route = "perfil/{nome}/{idade}",
-                            arguments = listOf(
-                                navArgument("nome") { type = NavType.StringType },
-                                navArgument("idade") { type = NavType.IntType }
-                            )
+                            route = "perfil/{usuario}",
+                            arguments = listOf(navArgument("usuario") { type = NavType.StringType })
                         ) {
-                            val nome: String? = it.arguments?.getString("nome", "Usuário Genérico")
-                            val idade: Int? = it.arguments?.getInt("idade", 0)
+                            val usuario: String = it.arguments?.getString("usuario")!!
                             PerfilScreen(
                                 modifier = Modifier.padding(innerPadding),
                                 navController,
-
-                                nome!!,
-                                idade!!
+                                usuario
                             )
                         }
                     }
