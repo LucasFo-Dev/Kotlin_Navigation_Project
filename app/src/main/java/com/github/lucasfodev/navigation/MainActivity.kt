@@ -38,8 +38,7 @@ class MainActivity : ComponentActivity() {
                         composable(route = "menu") {
                             MenuScreen(modifier = Modifier.padding(innerPadding), navController)
                         }
-                        composable(
-                            route = "pedidos?categoria={categoria}",
+                        composable(route = "pedidos?categoria={categoria}",
                             arguments = listOf(navArgument("categoria") {
                                 defaultValue = "Geral"
                             })
