@@ -39,15 +39,15 @@ class MainActivity : ComponentActivity() {
                             MenuScreen(modifier = Modifier.padding(innerPadding), navController)
                         }
                         composable(
-                            route = "pedidos?cliente={cliente}",
-                            arguments = listOf(navArgument("cliente") {
-                                defaultValue = "Cliente Genérico"
+                            route = "pedidos?categoria={categoria}",
+                            arguments = listOf(navArgument("categoria") {
+                                defaultValue = "Geral"
                             })
                         ) {
                             PedidosScreen(
                                 modifier = Modifier.padding(innerPadding),
                                 navController,
-                                it.arguments?.getString("cliente")
+                                it.arguments?.getString("categoria")
                             )
                         }
                         composable(

@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
-fun PedidosScreen(modifier: Modifier = Modifier, navController: NavController, cliente: String?) {
+fun PedidosScreen(modifier: Modifier = Modifier, navController: NavController, categoria: String?) {
     Box(
         modifier = modifier
             .fillMaxSize()
@@ -25,7 +25,7 @@ fun PedidosScreen(modifier: Modifier = Modifier, navController: NavController, c
             .padding(32.dp)
     ) {
         Text(
-            text = "PEDIDOS - $cliente",
+            text = "PEDIDOS - $categoria",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             color = Color.White
